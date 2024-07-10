@@ -1,0 +1,31 @@
+<div class="container-fluid pt-3">
+    <div class="row">
+      <div class="col-12">
+        <h3 class="fw-bold">المواد</h3>
+      </div>
+    </div>
+  
+    <div class="row justify-content-center ">
+      <div class="col-md-6 mb-4 shadow rounded-3" *ngFor="let subject of subjects">
+        <mat-card>
+          <img mat-card-image [src]="subject.image" alt="{{ subject.name }}">
+          <mat-card-content>
+            <h4 class="fw-bold pt-3">{{ subject.name }}</h4>
+            <p>{{ subject.description }}</p>
+            <h5>الحاله:
+              <span [ngClass]="{
+                    'status-completed': subject.status === 'مكتمل',
+                    'status-not-completed': subject.status === 'غير مكتمل'
+                  }">{{ subject.status }}</span>
+            </h5>
+            <a class="text-decoration-none text-pink pointer d-flex" routerLink="/students/all-exercises">اضافه التمارين
+              <mat-icon class="pt-1">arrow_back</mat-icon>
+            </a>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      
+    </div>
+    
+  </div>
+  

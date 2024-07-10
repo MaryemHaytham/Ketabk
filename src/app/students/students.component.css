@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.app-sidenav {
+  flex: 0 0 250px;
+  
+  color: white;
+  padding: 20px;
+}
+
+.content {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999; 
+}
+
+
+
+.content {
+  flex: 1;
+}
+
+.content.content-with-sidebar {
+  margin-right: 0;
+}
+
+
+.with-sidebar {
+  right: 250px;
+  padding: 3px;
+  transition: left 0.3s ease, padding-right 0.3s ease;
+}
+
+
+.without-sidebar {
+  right: 25px;
+  padding: 3px;
+  transition: right 0.3s ease, padding-right 0.3s ease;
+}
+
+.text-pink{
+    color: #FF3BA6;
+  }

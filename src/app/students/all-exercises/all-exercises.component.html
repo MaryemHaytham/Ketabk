@@ -1,0 +1,93 @@
+<section>
+    <div cdkDropListGroup>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="example-container">
+                    <div
+                        cdkDropList
+                        [cdkDropListData]="todo"
+                        class="example-list bg-pink"
+                        (cdkDropListDropped)="drop($event)">
+                        <h5 class="fw-bold">اسحب نوع السؤال</h5>
+                        <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="example-container-textarea">
+                    <div
+                        cdkDropList
+                        [cdkDropListData]="done"
+                        class="example-list bg-white done-list"
+                        (cdkDropListDropped)="drop($event)">
+                        <div class="example-placeholder" *ngIf="done.length === 0">قم بسحب و ادراج نوع السؤال هنا ..</div>
+                        <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+                    </div>
+                </div>
+                <div class="col-md-10 form-style">
+                    <div>
+                        <h4 class="fw-bold">اختيار فردي</h4>
+                        <textarea placeholder="نص السؤال.." class="w-100"></textarea>
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1">سهل</mat-radio-button>
+                            <mat-radio-button value="2">متوسط</mat-radio-button>
+                            <mat-radio-button value="3">صعب</mat-radio-button>
+                        </mat-radio-group>
+                        <div>
+                             
+                             
+                            <mat-radio-group aria-label="Select an option" class="d-flex justify-content-between ">
+                                <input type="text" name="" id="" class="w-50 p-2 m-2"  placeholder="الاختيار الثاني">
+                                <mat-radio-button value="1">تحديد كأجابه صحيحه</mat-radio-button>           
+                            </mat-radio-group>
+                            <mat-radio-group aria-label="Select an option" class="d-flex justify-content-between ">
+                                <input type="text" name="" id="" class="w-50 p-2 m-2"  placeholder="الاختيار الثاني">
+                                <mat-radio-button value="1">تحديد كأجابه صحيحه</mat-radio-button>            
+                            </mat-radio-group>
+                            <div class="p-3">
+                                <button class="btn btn-save ms-3">حفظ ك مسوده</button>
+                                <button class="btn btn-cancle text-danger">الغاء</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                  
+    
+                </div>
+                <div class="col-md-10 form-style">
+                    <div>
+                        <h4 class="fw-bold">اختيار من متعدد</h4>
+                        <textarea placeholder="نص السؤال.." class="w-100"></textarea>
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1">سهل</mat-radio-button>
+                            <mat-radio-button value="2">متوسط</mat-radio-button>
+                            <mat-radio-button value="3">صعب</mat-radio-button>
+                        </mat-radio-group>
+                        <div>
+                             
+                             
+                            <section aria-label="Select an option" class="d-flex justify-content-between ">
+                                <input type="text" name="" id="" class="w-50 p-2 m-2"  placeholder="الاختيار الاول">
+                                <mat-checkbox class="example-margin" >تحديد كأجابه صحيحه</mat-checkbox>          
+                            </section>
+                            <section aria-label="Select an option" class="d-flex justify-content-between ">
+                                <input type="text" name="" id="" class="w-50 p-2 m-2"  placeholder="الاختيار الثاني">
+                                <mat-checkbox class="example-margin" >تحديد كأجابه صحيحه</mat-checkbox>          
+                            </section>
+                            <div class="p-3">
+                                <button class="btn btn-save ms-3">حفظ ك مسوده</button>
+                                <button class="btn btn-cancle text-danger">الغاء</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                  
+    
+                </div>
+
+            </div>
+        </div>
+    
+        
+    </div>
+</section>

@@ -1,0 +1,52 @@
+.mat-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+img{
+    width: 100%;
+    border-radius: 10px;
+    height: 170px;   
+  }
+  
+  .mat-card-actions {
+    margin-top: auto;
+  }
+  
+  @media (max-width: 767px) {
+    .row > .col-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .row > .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  .status-completed {
+    color: #00C614;
+    background-color:#00C6141F; 
+    padding: 2px 4px; 
+    border-radius: 4px; 
+  }
+  
+  .status-not-completed {
+    color: #FFC11A;
+    background-color: #FDD46B47;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  .text-pink{
+    color: #FF3BA6;
+    font-size: large;
+    font-weight: bold;
+  }
+  .pointer{
+    cursor: pointer;
+  }
